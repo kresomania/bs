@@ -19,14 +19,15 @@
 #include <unistd.h>
 #include <time.h>
 
+int pid;
+time_t t;
+
 int main(int argc, char **argv) {
 
     if( argc != 2 ) {
 	(void)fprintf(stderr, "synopsis: ticker message\n");
-	int pid;
 	pid = getpid();
 	printf("PID: %d\n", pid);
-	time_t t;
 	t = time(NULL);
 	printf("Time: %s\n", ctime(&t));
 	return(1);
@@ -34,6 +35,10 @@ int main(int argc, char **argv) {
 
     while(1) {
 	(void)printf("%s\n",argv[1]);
+        pid = getpid();
+        printf("PID: %d\n", pid);
+        t = time(NULL);
+        printf("Time: %s\n", ctime(&t));
 	(void)sleep(1);
     }
 
