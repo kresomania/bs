@@ -1,1 +1,1 @@
-obj-m := nothing.o
+obj-m := nothing.o hello.o

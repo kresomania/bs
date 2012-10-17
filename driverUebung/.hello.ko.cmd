@@ -1,0 +1,1 @@
+cmd_/home/kresi/bs/bs/driverUebung/hello.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.2.0-31-generic-pae/scripts/module-common.lds --build-id  -o /home/kresi/bs/bs/driverUebung/hello.ko /home/kresi/bs/bs/driverUebung/hello.o /home/kresi/bs/bs/driverUebung/hello.mod.o
